@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+import Spinner from './Spinner';
+import Winwheel from './Winwheel';
+import {useState} from 'react'
 
 function App() {
+  const title = "The Equality Act Game";
+  const [slide, setSlide] = useState("0");
+
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div align="center" class="heading" id ="spinner">
+      <div className="nine heading">
+      <h1>{title} {slide}</h1>
+      <span> Spin the wheel</span>
+    
+      <div><Spinner /></div>
+      <div><Winwheel /></div>
+      </div>    </div>
     </div>
   );
 }
